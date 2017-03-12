@@ -68,8 +68,8 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: git@github.com:p2ng/p2ng.github.io.git
-    # github: git@github.com:p2ng/p2ng.git, master
-    # coding: git@git.coding.net:p2ng/p2ng.git, master
+- type: git
+  repo: git@git.oschina.net:p2ng/p2ng.git
   branch: master

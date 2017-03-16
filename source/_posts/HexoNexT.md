@@ -4,6 +4,8 @@ date: 2017-03-13 22:56:27
 updated:
 tags:
 categories:
+keywords:
+description:
 ---
 
 最近在松鼠厂有点闲（工作不饱和），偷偷摸摸的清理各种博客文章发现这么一个宝，免费、静态、博客的东西，又能装13，就心血来潮折腾一吧。
@@ -15,6 +17,6 @@ categories:
 学渣粗略翻过它两的官网后发现没啥继续说了.就这样吧。
 如果有遇到什么问题，可以联系!~
 
-参考：
+#参考：
 https://hexo.io
 http://theme-next.iissnan.com

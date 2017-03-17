@@ -1,9 +1,11 @@
 ---
-title: {{ title }}
+title:
 date: {{ date }}
-updated:
+updated: {{ date }}
+comments: true
 tags:
 categories:
+permalink:
 keywords:
 description:
 ---

@@ -1,9 +1,11 @@
 ---
 title: Hexo + NexT
 date: 2017-03-13 22:56:27
-updated:
+updated: {{ date }}
+comments: true
 tags:
 categories:
+permalink: 
 keywords:
 description:
 ---
@@ -17,6 +19,6 @@ description:
 学渣粗略翻过它两的官网后发现没啥继续说了.就这样吧。
 如果有遇到什么问题，可以联系!~
 
-#参考：
+# 参考：
 https://hexo.io
 http://theme-next.iissnan.com

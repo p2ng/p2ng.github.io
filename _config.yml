@@ -76,4 +76,3 @@ deploy:
   branch: master
 
 baidu_analytics: 1ef3816ebc34380948fefb80135e20d8
-duoshuo_share: true

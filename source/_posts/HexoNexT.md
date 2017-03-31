@@ -5,7 +5,7 @@ updated: {{ date }}
 comments: true
 tags:
 categories:
-permalink: 
+permalink:
 keywords:
 description:
 ---

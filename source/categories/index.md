@@ -1,5 +1,6 @@
 ---
-title: categories
-date: 2017-03-14 10:17:39
 comments: false
+date: 2017-04-05 18:46:22
+updated: 2017-04-05 18:46:22
+type: "categories"
 ---

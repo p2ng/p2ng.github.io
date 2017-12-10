@@ -135,6 +135,7 @@ font:
 social:
   GitHub: https://github.com/p2ng
   Weibo: http://weibo.com/2011p2ng
+  oschina: https://my.oschina.net/p2ng
 
 
 # Social Links Icons
@@ -203,7 +204,13 @@ links_title: Links
 #links_layout: block
 #links_layout: inline
 links:
-  个人oschina: https://my.oschina.net/p2ng
+  腾讯大数据: http://data.qq.com/blog
+  阿里中间件: http://jm.taobao.org/
+  美团点评技术团队: https://tech.meituan.com/
+  携程技术中心: http://techshow.ctrip.com/
+  网易乐得技术团队: http://tech.lede.com/
+  有赞技术团队: https://tech.youzan.com/
+  coding: https://blog.coding.net/
 
 
 # ---------------------------------------------------------------

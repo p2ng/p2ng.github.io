@@ -37,12 +37,12 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
+  # categories: /categories
   archives: /archives
-  tags: /tags
-  #sitemap: /sitemap.xml
+  # tags: /tags
+  # sitemap: /sitemap.xml
   about: /about
-  #commonweal: /404.html
+  # commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -210,6 +210,7 @@ links:
   携程技术中心: http://techshow.ctrip.com/
   网易乐得技术团队: http://tech.lede.com/
   有赞技术团队: https://tech.youzan.com/
+  猫头鹰技术博客: http://mtydev.net/
   coding: https://blog.coding.net/
 
 

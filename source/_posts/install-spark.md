@@ -2,7 +2,7 @@
 comments: true
 date: 2018-01-07 09:31:01
 updated: {{ date }}
-title: 安装Spark2.* + Python3.*
+title: 单机模式(standalone mode) - 安装Spark2.* + Python3.*
 tags: [Spark]
 categories: Spark
 permalink:
@@ -12,6 +12,7 @@ description:
 
 # 参考
 http://spark.apache.org/
+http://spark.apache.org/docs/latest/api/python/pyspark.html
 
 # 简介
 
@@ -51,6 +52,10 @@ pyspark
 
 - done
 ![done](/uploads/posts/WX20180107-095252.png)
+
+- SparkUI
+默认是：http://localhost:4040
+如果有端口占用了会递增+1，注意console的日志输出
 
 - brew的spark安装目录
 /usr/local/Cellar/apache-spark

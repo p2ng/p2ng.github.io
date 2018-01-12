@@ -34,6 +34,10 @@ http://spark.apache.org
 http://spark.apache.org/docs/latest/api/python/pyspark.html
 - 新建环境`PySpark`
 - 搜索并安装`pyspark`
+- 搜索并安装`jupyter`
+![done](/uploads/posts/Snip20180113_5.png)
+- DONE
+![done](/uploads/posts/Snip20180113_6.png)
 
 ***
 
@@ -54,7 +58,3 @@ http://pytorch.org/
 ![done](/uploads/posts/Snip20180112_3.png)
 - 用Anaconda跑起Python3环境，Done😊
 ![done](/uploads/posts/Snip20180112_4.png)
-
-
-
-

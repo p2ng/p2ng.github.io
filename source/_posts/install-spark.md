@@ -59,3 +59,6 @@ pyspark
 
 - brew的spark安装目录
 /usr/local/Cellar/apache-spark
+
+- Anaconda-Navigator For Mac方式
+[THIS](/2018/01/10/anaconda-navigator-for-mac/) 

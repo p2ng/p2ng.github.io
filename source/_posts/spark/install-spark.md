@@ -5,8 +5,6 @@ updated: {{ date }}
 title: 单机模式(standalone mode) - 安装Spark2.* + Python3.*
 tags: [Spark]
 categories: Spark
-permalink:
-keywords: Spark
 description:
 ---
 

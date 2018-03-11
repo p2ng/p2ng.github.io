@@ -2,11 +2,7 @@
 date: 2018-02-18 09:33:25
 updated: {{ date }}
 title: Homebrew
-tags:
 categories: Mac
-permalink:
-keywords:
-description:
 ---
 
 # Homebrew

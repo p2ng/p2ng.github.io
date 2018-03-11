@@ -2,8 +2,7 @@
 date: 2018-03-06 22:37:25
 updated: {{ date }}
 title: Mac小技巧
-categories:
-description:
+categories: other
 ---
 
 

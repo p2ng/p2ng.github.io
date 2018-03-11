@@ -2,8 +2,7 @@
 date: 2018-02-27 21:42:36
 updated: {{ date }}
 title: 外地人在广州如何买车？
-categories: Other
-description: 
+categories: other
 ---
 
 

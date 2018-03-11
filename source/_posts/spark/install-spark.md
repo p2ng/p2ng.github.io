@@ -1,11 +1,8 @@
 ---
-comments: true
 date: 2018-01-07 09:31:01
 updated: {{ date }}
 title: 单机模式(standalone mode) - 安装Spark2.* + Python3.*
-tags: [Spark]
 categories: Spark
-description:
 ---
 
 # 参考

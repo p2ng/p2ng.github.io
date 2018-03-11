@@ -1,13 +1,8 @@
 ---
-comments: true
 date: 2018-01-10 00:16:20
 updated: {{ date }}
 title: Anaconda Navigator For Mac
-tags: 
-categories: 
-permalink:
-keywords: 
-description:
+categories: tool 
 ---
 
 # 参考

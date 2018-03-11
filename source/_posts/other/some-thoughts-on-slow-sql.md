@@ -2,12 +2,7 @@
 title: SomeThoughtsOnSlowSQL
 date: 2017-03-16 23:40:21
 updated: {{ date }}
-comments: true
-tags: [慢SQL,数据库,思考]
-categories: 数据库
-permalink:
-keywords: 慢SQL,数据库,思考
-description: 慢SQL的一些思考
+categories: other
 ---
 
 近几年的315都挺紧张，企业都生怕被免费做广告!~

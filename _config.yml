@@ -69,11 +69,10 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:p2ng/p2ng.github.io.git
-- type: git
-  repo: git@git.oschina.net:p2ng/p2ng.git
-  branch: master
+  type: git
+  repo:
+    github: git@github.com:p2ng/p2ng.github.io.git,master
+    oschina: git@git.oschina.net:p2ng/p2ng.git,master
 
 baidu_analytics: 1ef3816ebc34380948fefb80135e20d8
 

@@ -1,7 +1,7 @@
 ---
 date: 2018-01-07 09:31:01
 updated: {{ date }}
-title: 单机模式(standalone mode) - 安装Spark2.* + Python3.*
+title: 单机模式 - 安装Spark2.* + Python3.*
 categories: Spark
 ---
 

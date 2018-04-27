@@ -11,6 +11,7 @@ categories: tool
 
 # 安装
 `brew cask install anaconda`
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 
 # 设置国内镜像源
 ```
@@ -23,6 +24,12 @@ show_channel_urls: true
 ```
 
 ***
+
+
+
+<!--more-->
+
+
 
 # 安装PySpark
 http://spark.apache.org

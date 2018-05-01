@@ -5,3 +5,11 @@ title: Numpy
 categories: Python
 description:
 ---
+
+# 参考
+http://www.numpy.org/
+
+
+
+
+

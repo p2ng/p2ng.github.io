@@ -2,14 +2,18 @@
 date: 2018-02-27 21:42:36
 updated: {{ date }}
 title: 外地人在广州如何买车？
-categories: other
+categories: 生活
 ---
-
 
 # 参考
 [广州市中小客车指标调控管理信息系统(车牌摇号)](http://jtzl.gzjt.gov.cn/)
+[个人指标常见问题](http://jtzl.gzjt.gov.cn/index/bszn/2015127/1449468542037_1.html)
 [广州市人力资源和社会保障局(医保)](http://www.hrssgz.gov.cn/)
 [广州车牌摇号申请攻略(百度经验)](https://jingyan.baidu.com/article/6dad5075f2d565a123e36eac.html)
+
+
+
+<!--more-->
 
 
 
@@ -67,3 +71,4 @@ ps: 一般上班时间08:30~17:30，周末、法定节假日休息(为人民服�
 
 # 每月26号可进行摇号结果的查询
 
+Good Luck

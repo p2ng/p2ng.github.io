@@ -3,7 +3,6 @@ date: 2018-04-18 23:29:05
 updated: {{ date }}
 title: SparkSQL
 categories: Spark
-description:
 ---
 
 # 参考

@@ -2,8 +2,7 @@
 date: 2018-04-28 08:12:29
 updated: {{ date }}
 title: SparkStreaming
-categories:
-description:
+categories: Spark
 ---
 
 

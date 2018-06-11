@@ -7,5 +7,7 @@ categories: tool
 
 
 # Synergy
+https://symless.com/synergy
+
 # Share Mouse
 # 微软官方的无界鼠标（Mouse Without Borders）

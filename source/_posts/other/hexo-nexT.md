@@ -14,6 +14,14 @@ categories: other
 学渣粗略翻过它两的官网后发现没啥继续说了.就这样吧。
 如果有遇到什么问题，可以联系!~
 
-# 参考：
+# 备忘命令
+```
+hexo clean
+hexo g
+hexo s
+hexo deploy
+```
+
+# 参考
 https://hexo.io
 http://theme-next.iissnan.com

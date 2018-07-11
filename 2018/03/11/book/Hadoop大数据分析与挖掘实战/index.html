@@ -1,0 +1,909 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="参考Hadoop大数据分析与挖掘实战 数据挖掘基础定义挖掘目标针对具体的数据挖掘应用需求，首先要明确本次的挖掘目标是什么？系统完成后能达到什么样的效果？因此必须分析应用领域，包括应用中的各种知识和应用目标，了解相关领域的有关情况，熟悉背景知识，弄清用户需求。要想充分发挥数据挖掘的价值，必须要对目标有一个清晰明确的定义，即决定到底想干什么。 数据挖掘建模过程目标定义（任务理解，指标确定）数据采集（建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hadoop大数据分析与挖掘实战">
+<meta property="og:url" content="https://p2ng.github.io/2018/03/11/book/Hadoop大数据分析与挖掘实战/index.html">
+<meta property="og:site_name" content="p2ng">
+<meta property="og:description" content="参考Hadoop大数据分析与挖掘实战 数据挖掘基础定义挖掘目标针对具体的数据挖掘应用需求，首先要明确本次的挖掘目标是什么？系统完成后能达到什么样的效果？因此必须分析应用领域，包括应用中的各种知识和应用目标，了解相关领域的有关情况，熟悉背景知识，弄清用户需求。要想充分发挥数据挖掘的价值，必须要对目标有一个清晰明确的定义，即决定到底想干什么。 数据挖掘建模过程目标定义（任务理解，指标确定）数据采集（建">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-11T06:15:14.335Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hadoop大数据分析与挖掘实战">
+<meta name="twitter:description" content="参考Hadoop大数据分析与挖掘实战 数据挖掘基础定义挖掘目标针对具体的数据挖掘应用需求，首先要明确本次的挖掘目标是什么？系统完成后能达到什么样的效果？因此必须分析应用领域，包括应用中的各种知识和应用目标，了解相关领域的有关情况，熟悉背景知识，弄清用户需求。要想充分发挥数据挖掘的价值，必须要对目标有一个清晰明确的定义，即决定到底想干什么。 数据挖掘建模过程目标定义（任务理解，指标确定）数据采集（建">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://p2ng.github.io/2018/03/11/book/Hadoop大数据分析与挖掘实战/"/>
+
+
+
+
+
+  <title> Hadoop大数据分析与挖掘实战 | p2ng </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1ef3816ebc34380948fefb80135e20d8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">p2ng</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我的
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/11/book/Hadoop大数据分析与挖掘实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hadoop大数据分析与挖掘实战
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-11T22:47:33+08:00">
+                2018-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/book/" itemprop="url" rel="index">
+                    <span itemprop="name">book</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,467 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://item.jd.com/11837003.html" target="_blank" rel="noopener">Hadoop大数据分析与挖掘实战</a></p>
+<h1 id="数据挖掘基础"><a href="#数据挖掘基础" class="headerlink" title="数据挖掘基础"></a>数据挖掘基础</h1><p><strong>定义挖掘目标</strong><br>针对具体的数据挖掘应用需求，首先要明确本次的挖掘目标是什么？系统完成后能达到什么样的效果？因此必须分析应用领域，包括应用中的各种知识和应用目标，了解相关领域的有关情况，熟悉背景知识，弄清用户需求。要想充分发挥数据挖掘的价值，必须要对目标有一个清晰明确的定义，即决定到底想干什么。</p>
+<h2 id="数据挖掘建模过程"><a href="#数据挖掘建模过程" class="headerlink" title="数据挖掘建模过程"></a>数据挖掘建模过程</h2><p>目标定义（任务理解，指标确定）<br>数据采集（建模抽样，质量把控，实时采集）<br>数据整理（数据探索，数据清洗，数据变换）<br>构建模型（模式发现，构建模型，验证模型）<br>模型评价（设定评价标准，多模型对比，模型优化）<br>模型发布（模型部署，模型重构）</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>业务系统 -&gt; 数据抽取（ETL） -&gt; 数据探索与预处理 -&gt; 建模&amp;应用 -&gt; 结果&amp;反馈</p>
+<a id="more"></a>
+<h1 id="书本案例"><a href="#书本案例" class="headerlink" title="书本案例"></a>书本案例</h1><h2 id="法律咨询数据分析与服务推荐"><a href="#法律咨询数据分析与服务推荐" class="headerlink" title="法律咨询数据分析与服务推荐"></a>法律咨询数据分析与服务推荐</h2><p><strong>目标：</strong><br>合适的资源推荐给用户，用户就会对该电子商务网站产生依赖，从而建立稳定的企业忠实顾客群，进而提高用户满意度。例如，当访问主页时，可以在婚姻栏目发现热点推荐。当访问具体的知识页面时，在页面的右边和下面发现也存在一些热点推荐和基于内容的关键字推荐。</p>
+<p><strong>分析方法与思路</strong></p>
+<ol>
+<li>通过用户访问网站页面时记录访问日志（IP、地理信息、用户ID、时间、网站分类等等）</li>
+<li>数据量太大意味着物品数与用户数很多，在模型构建用户与物品的稀疏矩阵时，出现设备内存空间不够的情况，并且模型计算需要消耗大量的时间</li>
+<li>用户区别很大，不同用户关注的信息不同，因此即使能够得到推荐结果，其推荐效果也会不好</li>
+<li>以用户浏览网页的类型分类，然后推荐每个类型中的内容</li>
+</ol>
+<p><strong>分析过程</strong></p>
+<ol>
+<li>从系统中获取用户访问网站的原始记录</li>
+<li>对数据进行多维度分析，用户访问内容、流失用户分析以及用户分类等分析</li>
+<li>对数据进行预处理，包括数据去重、数据删选、数据分类等处理过程</li>
+<li>以用户访问html后缀等网页位关键条件（网页包含分类信息），对数据进行处理</li>
+<li>对比多种推荐算法进行推荐，通过模型评价，得到比较好的智能推荐模型。通过模型对样本数据进行预测，获得推荐结果</li>
+</ol>
+<h2 id="电商产品评论数据情感分析"><a href="#电商产品评论数据情感分析" class="headerlink" title="电商产品评论数据情感分析"></a>电商产品评论数据情感分析</h2><p><strong>目标</strong></p>
+<ol>
+<li>分析某一商品的用户情感倾向</li>
+<li>从评论文本中挖掘出该商品的优点与不足</li>
+<li>提炼不同品牌商品的卖点</li>
+</ol>
+<p><strong>分析方法与过程</strong></p>
+<ol>
+<li>利用爬虫工具（八抓鱼）</li>
+<li>对获取对数据进行基本对处理操作，包括数据预处理（文本去重、机械语料压缩以及短句删除）、中文分词、停用此过滤</li>
+<li>文本评论数据经过处理后，运用多种手段对评论数据进行多方面对分析</li>
+<li>从对应结果对分析中获取文本评论数据中有价值对内容</li>
+</ol>
+<p><strong>构建模型</strong></p>
+<ol>
+<li>情感倾向性模型</li>
+<li>基于语义网络都评论分析</li>
+<li>基于LDA模型的主题分析</li>
+</ol>
+<h2 id="航空公司客户价值分析"><a href="#航空公司客户价值分析" class="headerlink" title="航空公司客户价值分析"></a>航空公司客户价值分析</h2><p><strong>目标</strong></p>
+<ol>
+<li>借助航空公司客户数据，对客户进行分类（利用类似Hive/SparkSQL等抽取数据大表：客户基本信息、乘机信息、积分信息等大类别）</li>
+<li>对不同的客户类别进行特征分析，比较不同类客户对价值</li>
+<li>对不同价值的客户类别提供个性化服务，制定相应对营销策略</li>
+</ol>
+<p><strong>分析方法与过程</strong><br>识别客户价值，即通过航空公司客户数据识别不同价值等客户。识别客户价值应用最广泛等模型是通过三个指标（最近消费时间间隔recency、消费频率frequency、消费金额monetary）来进行客户细分，识别出高价值等客户，简称<code>RFM模型</code></p>
+<h2 id="基站定位数据商圈分析"><a href="#基站定位数据商圈分析" class="headerlink" title="基站定位数据商圈分析"></a>基站定位数据商圈分析</h2><p><strong>目标</strong></p>
+<ol>
+<li>对用户的历史定位数据，采用数据挖掘技术，对基站进行分群</li>
+<li>分析不同商圈分群的特征，比较不同商圈类别的价值，选择合适的区域进行运营商（也可以其它）的促销活动</li>
+</ol>
+<p><strong>分析方法与过程</strong></p>
+<ol>
+<li>从移动通信运营商提供的特定接口上解析、处理、并滤除用户属性后得到用户定位数据</li>
+<li>以单个用户为例，进行数据探索分析，研究在不同基站的停留时间，并进一步进行预处理，包括数据规约和数据变换</li>
+<li>利用上一步，形成的已完成数据预处理的建模数据，基于基站覆盖范围区域的人流特征进行商圈聚类，分析各个商圈分群的特征，选择合适的区域进行运营商的促销活动</li>
+</ol>
+<h2 id="互联网电影智能推荐"><a href="#互联网电影智能推荐" class="headerlink" title="互联网电影智能推荐"></a>互联网电影智能推荐</h2><p><strong>目标</strong><br>根据用户对电影的评分数据，利用只能推荐技术，实现电影只能推荐</p>
+<p><strong>分析方法与过程</strong><br>常用推荐算法：基于内存的推荐算法、协同过滤推荐算法和基于网络结构的推荐算法<br><code>协同过滤推荐</code>的主要研究方向分为<code>基于内存的算法</code>和<code>基于模型的算法</code>两类，其中<code>基于内存的协同过滤推荐算法</code>按照<code>相似度</code>比较对象的不同，又可以分为<code>基于用户</code>和<code>基于项目</code>两种，但基于用户的协同过滤随着用户数的增加，计算的复杂度会越来越大，因此<code>基于项目的协同过滤</code>应用相对较多。<br>显式评分：用户直接对项目对打分<br>隐式评分：根据用户的历史行为记录，如浏览频率、评论等信息间接推测出的评分</p>
+<ol>
+<li>从视频网站的数据库中选择性抽取用户对电影的评分数据和电影元数据</li>
+<li>利用用户对电影的评分数据构造<code>用户 - 项目评分矩阵</code></li>
+<li>利用2）形成的<code>用户 - 项目评分矩阵</code>，计算<code>电影项目之间的相似度</code></li>
+<li>利用2）的<code>用户 - 项目评分矩阵</code> 和3）的<code>电影项目之间的相似度</code>，计算用户的电影项目评分预测，并把预测评分高的电影项目作为推荐结果</li>
+</ol>
+<p>矩阵：<br>N <em> M（用户数目 </em> 电影数目）列 * 行<br>用户1电影1评分    用户1电影2评分    用户1电影3评分    用户1电影4评分    。。。<br>用户2电影1评分    用户2电影2评分    用户2电影3评分    用户2电影4评分    。。。<br>用户3电影1评分    用户3电影2评分    用户3电影3评分    用户3电影4评分    。。。<br>。。。</p>
+<h2 id="家电故障备件储备预测分析"><a href="#家电故障备件储备预测分析" class="headerlink" title="家电故障备件储备预测分析"></a>家电故障备件储备预测分析</h2><p><strong>目标</strong><br>对不同的地区进行整理分析，构建地区、故障、故障出现率数据，使用协同过滤算法预测各地区故障及故障率</p>
+<p><strong>分析方法与过程</strong></p>
+<ol>
+<li>从数据源中抽取出历史数据</li>
+<li>根据历史数据，进行数据探索分析，研究数据对缺少和异常情况，并进一步进行预处理</li>
+<li>数据预处理的过程中需要对数据进行属性提取、变换、从而得到用于协同过滤算法模型的建模数据</li>
+<li>利用3）的建模数据，建立协同过滤算法模型。针对地区、地区故障、地区故障率数据，使用协同过滤算法模型进行预测分析。根据模型的输出结果进行应用，根据应用的情况来优化模型。反复循环，最终得到模型的结果，用于实际应用</li>
+</ol>
+<h2 id="市供水混凝投药量控制分析"><a href="#市供水混凝投药量控制分析" class="headerlink" title="市供水混凝投药量控制分析"></a>市供水混凝投药量控制分析</h2><h2 id="基于图像处理的车辆压双黄线检测"><a href="#基于图像处理的车辆压双黄线检测" class="headerlink" title="基于图像处理的车辆压双黄线检测"></a>基于图像处理的车辆压双黄线检测</h2><p><strong>分析方法与过程</strong></p>
+<ol>
+<li>从数据源中抽取出历史视频数据（视频按照帧来分割）</li>
+<li>根据历史视频数据，进行数据探索分析，研究数据的缺失和异常情况，并进一步预处理</li>
+<li>数据预处理主要是对图像数据进行预处理，包括道路双黄线自动提取、道路背景提取、运动车辆提取、运动车辆阴影去除、运动车辆与行人区分等；针对不同的处理应用不同的技术，如均值滤波、变形Sobel算子、P-参数和最大类间方程以及Otus阀值化技术等过滤图像数据</li>
+<li>经过数据预处理后的图像数据，应用车辆中心检测方法以及灰度帧差统计方法来检测车辆压双黄线</li>
+</ol>
+<p><strong>车辆压双黄线检测流程图</strong><br>开始</p>
+<p>自动双黄线检测 -&gt; 失败 -&gt; 人工标记双黄线</p>
+<p>道路背景提取</p>
+<p>基于背景差分法和高斯混合模型法的车辆目标检测与跟踪</p>
+<p>行人与车辆区分</p>
+<p>车辆压双黄线检测</p>
+<p>结束</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/06/other/Mac小技巧/" rel="next" title="Mac小技巧">
+                <i class="fa fa-chevron-left"></i> Mac小技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/12/tool/如何使用一套键鼠，同时控制几台电脑/" rel="prev" title="如何使用一套键鼠，同时控制几台电脑">
+                如何使用一套键鼠，同时控制几台电脑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpeg"
+               alt="p2ng" />
+          <p class="site-author-name" itemprop="name">p2ng</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/p2ng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2011p2ng" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://my.oschina.net/p2ng" target="_blank" title="oschina">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  oschina
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/liangzp" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://data.qq.com/blog" title="腾讯大数据" target="_blank">腾讯大数据</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://jm.taobao.org/" title="阿里中间件" target="_blank">阿里中间件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://tech.meituan.com/" title="美团点评技术团队" target="_blank">美团点评技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://techshow.ctrip.com/" title="携程技术中心" target="_blank">携程技术中心</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tech.lede.com/" title="网易乐得技术团队" target="_blank">网易乐得技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://tech.youzan.com/" title="有赞技术团队" target="_blank">有赞技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mtydev.net/" title="猫头鹰技术博客" target="_blank">猫头鹰技术博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.coding.net/" title="coding" target="_blank">coding</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据挖掘基础"><span class="nav-number">2.</span> <span class="nav-text">数据挖掘基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据挖掘建模过程"><span class="nav-number">2.1.</span> <span class="nav-text">数据挖掘建模过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">2.2.</span> <span class="nav-text">流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#书本案例"><span class="nav-number">3.</span> <span class="nav-text">书本案例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#法律咨询数据分析与服务推荐"><span class="nav-number">3.1.</span> <span class="nav-text">法律咨询数据分析与服务推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电商产品评论数据情感分析"><span class="nav-number">3.2.</span> <span class="nav-text">电商产品评论数据情感分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#航空公司客户价值分析"><span class="nav-number">3.3.</span> <span class="nav-text">航空公司客户价值分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基站定位数据商圈分析"><span class="nav-number">3.4.</span> <span class="nav-text">基站定位数据商圈分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网电影智能推荐"><span class="nav-number">3.5.</span> <span class="nav-text">互联网电影智能推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#家电故障备件储备预测分析"><span class="nav-number">3.6.</span> <span class="nav-text">家电故障备件储备预测分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#市供水混凝投药量控制分析"><span class="nav-number">3.7.</span> <span class="nav-text">市供水混凝投药量控制分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于图像处理的车辆压双黄线检测"><span class="nav-number">3.8.</span> <span class="nav-text">基于图像处理的车辆压双黄线检测</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">p2ng</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>

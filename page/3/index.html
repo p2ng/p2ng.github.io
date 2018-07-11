@@ -258,6 +258,361 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/18/tool/Homebrew/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/18/tool/Homebrew/" itemprop="url">
+                  Homebrew
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-18T09:33:25+08:00">
+                2018-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  398 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p><a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a><br><a href="http://caskroom.github.io/" target="_blank" rel="noopener">http://caskroom.github.io/</a><br><a href="https://www.zhihu.com/question/22624898" target="_blank" rel="noopener">brew和brew cask有什么区别？</a></p>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># brew</span></span><br><span class="line">/usr/bin/ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># cask</span></span><br><span class="line">brew tap caskroom/cask</span><br></pre></td></tr></table></figure>
+<h1 id="Homebrew-cask-upgrade"><a href="#Homebrew-cask-upgrade" class="headerlink" title="Homebrew cask upgrade"></a>Homebrew cask upgrade</h1><p>由于Homebrew-cask不支持动态显示软件版本是否有更新，所以要安装插件来管理…<br><a href="https://github.com/buo/homebrew-cask-upgrade" target="_blank" rel="noopener">https://github.com/buo/homebrew-cask-upgrade</a></p>
+<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>tap <span class="keyword">buo/cask-upgrade</span></span><br></pre></td></tr></table></figure>
+<h1 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h1><h2 id="Homebrew-1"><a href="#Homebrew-1" class="headerlink" title="Homebrew"></a>Homebrew</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">brew list               显示所有的已安装的软件</span><br><span class="line">brew <span class="builtin-name">info</span> $&lt;软件包&gt;      显示某个包信息</span><br><span class="line">brew <span class="builtin-name">info</span>               显示安装的包数量、文件数量以及占用空间 </span><br><span class="line"></span><br><span class="line">brew search text        搜索本地远程仓库的软件，已安装会显示绿色的勾</span><br><span class="line">brew install &lt;formula&gt;  安装指定软件</span><br><span class="line">brew unistall &lt;formula&gt; 卸载指定软件</span><br><span class="line"></span><br><span class="line">brew update             自动升级homebrew（从github下载最新版本）</span><br><span class="line">brew outdated           检测已经过时的软件</span><br><span class="line">brew<span class="built_in"> upgrade </span>           升级所有已过时的软件，即列出的以过时软件</span><br><span class="line">brew<span class="built_in"> upgrade </span>&lt;formula&gt;  升级指定的软件</span><br><span class="line">brew pin &lt;formula&gt;      禁止指定软件升级</span><br><span class="line">brew unpin &lt;formula&gt;    解锁禁止升级</span><br><span class="line">brew<span class="built_in"> upgrade </span>--all      升级所有的软件包，包括未清理干净的旧版本的包</span><br><span class="line"></span><br><span class="line">brew cleanup -n         列出需要清理的内容</span><br><span class="line">brew cleanup &lt;formula&gt;  清理指定的软件过时包</span><br><span class="line">brew cleanup            清理所有的过时软件</span><br></pre></td></tr></table></figure>
+<h2 id="Homebrew-cask"><a href="#Homebrew-cask" class="headerlink" title="Homebrew cask"></a>Homebrew cask</h2><p>用法基本同<code>Homebrew</code>一致</p>
+<h2 id="Homebrew-cask-upgrade-1"><a href="#Homebrew-cask-upgrade-1" class="headerlink" title="Homebrew cask upgrade"></a>Homebrew cask upgrade</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew help cu            help</span><br><span class="line">brew cu                <span class="built_in"> Upgrade </span>outdated apps</span><br><span class="line">brew cu [CASK]         <span class="built_in"> Upgrade </span>a specific app</span><br></pre></td></tr></table></figure>
+<h1 id="全球最大基友交友网共享"><a href="#全球最大基友交友网共享" class="headerlink" title="全球最大基友交友网共享"></a>全球最大基友交友网共享</h1><p><a href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md" target="_blank" rel="noopener">https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md</a></p>
+<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p><a href="https://zhuanlan.zhihu.com/p/28249327" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28249327</a></p>
+<h1 id="Show-Case"><a href="#Show-Case" class="headerlink" title="Show Case"></a>Show Case</h1>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/01/10/tool/anaconda-navigator-for-mac/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/01/10/tool/anaconda-navigator-for-mac/" itemprop="url">
+                  Anaconda Navigator For Mac
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T00:16:20+08:00">
+                2018-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tool/" itemprop="url" rel="index">
+                    <span itemprop="name">tool</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  171 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="https://www.anaconda.com/" target="_blank" rel="noopener">https://www.anaconda.com/</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>brew cask install anaconda</code></p>
+<h1 id="设置国内镜像源"><a href="#设置国内镜像源" class="headerlink" title="设置国内镜像源"></a>设置国内镜像源</h1><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.condarc</span><br><span class="line"></span><br><span class="line">channels:</span><br><span class="line"> -<span class="ruby"> <span class="symbol">https:</span>/<span class="regexp">/mirrors.tuna.tsinghua.edu.cn/anaconda</span><span class="regexp">/pkgs/free</span><span class="regexp">/</span></span></span><br><span class="line"><span class="ruby"> - defaults</span></span><br><span class="line"><span class="ruby"><span class="symbol">show_channel_urls:</span> <span class="literal">true</span></span></span><br></pre></td></tr></table></figure>
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/10/tool/anaconda-navigator-for-mac/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/01/07/spark/install-spark/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -350,7 +705,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  301 字
                 </span>
               
 
@@ -366,7 +721,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -534,7 +889,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  491 字
                 </span>
               
 
@@ -550,7 +905,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  2 分钟
                 </span>
               
             </div>
@@ -726,7 +1081,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  218 字
                 </span>
               
 
@@ -742,7 +1097,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -765,7 +1120,8 @@
           
             <p>最近在松鼠厂有点闲（工作不饱和），偷偷摸摸的清理各种博客文章发现这么一个宝，免费、静态、博客的东西，又能装13，就心血来潮折腾一吧。<br>2014年毕业后被主管安利<code>为知笔记</code>，至今共有300+个笔记。也算是养成写写东西习惯<br>这里就不step by step教从0到1啦。这玩意(Hexo)2014年冒出来，3年过去了各种教程文章已经满天飞，这里就记录一些高级东西吧。</p>
 <p>一个好的工具绝逼可以事半功倍，例如Hexo + NexT。<br>……<br>学渣粗略翻过它两的官网后发现没啥继续说了.就这样吧。<br>如果有遇到什么问题，可以联系!~</p>
-<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a><br><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">http://theme-next.iissnan.com</a></p>
+<h1 id="备忘命令"><a href="#备忘命令" class="headerlink" title="备忘命令"></a>备忘命令</h1><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span></span><br><span class="line"><span class="attribute">hexo g</span></span><br><span class="line"><span class="attribute">hexo s</span></span><br><span class="line"><span class="attribute">hexo deploy</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://hexo.io" target="_blank" rel="noopener">https://hexo.io</a><br><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">http://theme-next.iissnan.com</a></p>
 
           
         
@@ -846,7 +1202,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -857,7 +1213,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

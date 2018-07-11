@@ -258,7 +258,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/19/tool/intellij-plugins/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/30/python/Python-词云/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -280,7 +280,352 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/19/tool/intellij-plugins/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/30/python/Python-词云/" itemprop="url">
+                  Python-词云
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T22:38:31+08:00">
+                2018-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  258 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>简单说，词云是根据一段文字里的关键词出现频率生成文字的图片组合，字体越大说明对应的词汇的频率越高！词云适合分析一些文本类型的字段，比如用户职位分布、热点词分析等。</p>
+<h1 id="wordcloud"><a href="#wordcloud" class="headerlink" title="wordcloud"></a>wordcloud</h1><p><a href="https://wordart.com/" target="_blank" rel="noopener">https://wordart.com/</a></p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p><code>$ pip install wordcloud</code></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><strong>在线工具</strong><br>Wordle是一个用于从文本生成词云图而提供的游戏工具<br>Tagxedo 可以在线制作个性化词云<br>Tagul 是一个 Web 服务，同样可以创建华丽的词云<br>Tagcrowd 还可以输入web的url，直接生成某个网页的词云</p>
+<p><strong>Python实现</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from wordcloud import WordCloud</span><br><span class="line">import jieba</span><br><span class="line"></span><br><span class="line"><span class="comment"># 是读取本地的文件</span></span><br><span class="line">text_from_file_with_apath = open('/Users/hecom/23tips.txt').read()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用jieba进行分词，并对分词的结果以空格隔开</span></span><br><span class="line">wordlist_after_jieba = jieba.cut(text_from_file_with_apath, cut_all = True)</span><br><span class="line">wl_space_split = <span class="string">" "</span>.join(wordlist_after_jieba)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对分词后的文本生成词云</span></span><br><span class="line">my_wordcloud = WordCloud().generate(wl_space_split)</span><br><span class="line"></span><br><span class="line">plt.imshow(my_wordcloud)</span><br><span class="line">plt.axis(<span class="string">"off"</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/30/python/Python-分词/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/03/30/python/Python-分词/" itemprop="url">
+                  Python-分词
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T22:38:31+08:00">
+                2018-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  130 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="jieba"><a href="#jieba" class="headerlink" title="jieba"></a>jieba</h1><h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p><code>$ pip install jieba</code></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding=utf-8  </span></span><br><span class="line">import jieba  </span><br><span class="line"></span><br><span class="line">seg_list = jieba.cut(<span class="string">"我来到北京清华大学"</span>, <span class="attribute">cut_all</span>=<span class="literal">True</span>)  </span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">"Full Mode: "</span> + <span class="string">"/ "</span>.join(seg_list))  # 全模式  </span><br><span class="line"></span><br><span class="line">seg_list = jieba.cut(<span class="string">"我来到北京清华大学"</span>, <span class="attribute">cut_all</span>=<span class="literal">False</span>)  </span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">"Default Mode: "</span> + <span class="string">"/ "</span>.join(seg_list))  # 精确模式  </span><br><span class="line"></span><br><span class="line">seg_list = jieba.cut(<span class="string">"他来到了网易杭研大厦"</span>)  # 默认是精确模式  </span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">", "</span>.join(seg_list))  </span><br><span class="line"></span><br><span class="line">seg_list = jieba.cut_for_search(<span class="string">"小明硕士毕业于中国科学院计算所，后在日本京都大学深造"</span>)  # 搜索引擎模式  </span><br><span class="line"><span class="builtin-name">print</span>(<span class="string">", "</span>.join(seg_list))</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/19/tool/Intellij插件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/03/19/tool/Intellij插件/" itemprop="url">
                   Intellij插件
                 </a>
               
@@ -350,7 +695,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  0 字
                 </span>
               
 
@@ -366,7 +711,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -427,7 +772,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/19/tool/chrome-plugins/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/19/tool/Chrome插件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -449,7 +794,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/19/tool/chrome-plugins/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/19/tool/Chrome插件/" itemprop="url">
                   Chrome插件
                 </a>
               
@@ -519,7 +864,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  178 字
                 </span>
               
 
@@ -535,7 +880,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -605,7 +950,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/14/other/linux-date/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/14/other/Linux时间/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -627,7 +972,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/14/other/linux-date/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/14/other/Linux时间/" itemprop="url">
                   Linux时间
                 </a>
               
@@ -697,7 +1042,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  244 字
                 </span>
               
 
@@ -713,7 +1058,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -782,7 +1127,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/12/tool/shared-screen-mouse/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/12/tool/如何使用一套键鼠，同时控制几台电脑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -804,7 +1149,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/12/tool/shared-screen-mouse/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/12/tool/如何使用一套键鼠，同时控制几台电脑/" itemprop="url">
                   如何使用一套键鼠，同时控制几台电脑
                 </a>
               
@@ -874,7 +1219,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  19 字
                 </span>
               
 
@@ -890,7 +1235,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -952,7 +1297,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/11/book/hadoop-practice-of-big-data-analysis-and-mining/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/11/book/Hadoop大数据分析与挖掘实战/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -974,7 +1319,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/11/book/hadoop-practice-of-big-data-analysis-and-mining/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/11/book/Hadoop大数据分析与挖掘实战/" itemprop="url">
                   Hadoop大数据分析与挖掘实战
                 </a>
               
@@ -1044,7 +1389,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  2,467 字
                 </span>
               
 
@@ -1060,7 +1405,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  8 分钟
                 </span>
               
             </div>
@@ -1086,7 +1431,7 @@
 <h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>业务系统 -&gt; 数据抽取（ETL） -&gt; 数据探索与预处理 -&gt; 建模&amp;应用 -&gt; 结果&amp;反馈</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/03/11/book/hadoop-practice-of-big-data-analysis-and-mining/#more" rel="contents">
+            <a class="btn" href="/2018/03/11/book/Hadoop大数据分析与挖掘实战/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1129,7 +1474,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/06/other/mac-skill/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/06/other/Mac小技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -1151,7 +1496,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/03/06/other/mac-skill/" itemprop="url">
+                <a class="post-title-link" href="/2018/03/06/other/Mac小技巧/" itemprop="url">
                   Mac小技巧
                 </a>
               
@@ -1221,7 +1566,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  225 字
                 </span>
               
 
@@ -1237,7 +1582,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -1258,32 +1603,16 @@
       
         
           
-            <h1 id="Mac-Shell"><a href="#Mac-Shell" class="headerlink" title="Mac Shell"></a>Mac Shell</h1><ul>
-<li><p>查看Mac概况<br><code>archey</code>,需要<code>brew install archey</code></p>
-</li>
-<li><p>Cat文件时代码高亮<br><code>brew install ccat</code></p>
-</li>
-<li><p>Shell自动补充命令<br><code>brew install autojump</code></p>
-</li>
-<li><p>文件以目录树形式展开<br><code>brew install tree</code></p>
-</li>
-<li><p>Mac读出一段文字<br><code>sleep 5 &amp;&amp; say &quot;Hello World&quot;</code> 5秒后电脑说出HelloWorld<br><code>mvn clean install &amp;&amp; say &#39;build ok!!!&#39;</code> 编译耗时长不想一直等待，可以巧妙使用&amp;&amp;</p>
-</li>
-<li><p>快速查看日历</p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cal <span class="comment">// 查看当前日历</span></span><br><span class="line">cal <span class="number">2018</span> <span class="comment">// 查看2018年的日历</span></span><br><span class="line"><span class="keyword">date</span> <span class="comment">// 查看当前时间</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示/隐藏文件夹</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">命令运行之后需要重新加载Finder：快捷键option + <span class="keyword">command</span> + <span class="title">esc</span>，选中<span class="title">Finder</span>，重新启动即可</span><br><span class="line"></span><br><span class="line">此命令显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">此命令关闭显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><ul>
-<li><p>调用emoji表情<br>control + command + 空格</p>
-</li>
-<li><p>输入苹果icon<br>option + shift + k</p>
-</li>
-<li><p>向后删除文本<br>fn + delete</p>
-</li>
-</ul>
+            <h1 id="Mac-Shell"><a href="#Mac-Shell" class="headerlink" title="Mac Shell"></a>Mac Shell</h1><h2 id="查看Mac概况"><a href="#查看Mac概况" class="headerlink" title="查看Mac概况"></a>查看Mac概况</h2><p><code>archey</code>,需要<code>brew install archey</code></p>
+<h2 id="Cat文件时代码高亮"><a href="#Cat文件时代码高亮" class="headerlink" title="Cat文件时代码高亮"></a>Cat文件时代码高亮</h2><p><code>brew install ccat</code></p>
+<h2 id="Shell自动补充命令"><a href="#Shell自动补充命令" class="headerlink" title="Shell自动补充命令"></a>Shell自动补充命令</h2><p><code>brew install autojump</code></p>
+<h2 id="文件以目录树形式展开"><a href="#文件以目录树形式展开" class="headerlink" title="文件以目录树形式展开"></a>文件以目录树形式展开</h2><p><code>brew install tree</code></p>
+<h2 id="Mac读出一段文字"><a href="#Mac读出一段文字" class="headerlink" title="Mac读出一段文字"></a>Mac读出一段文字</h2><p><code>sleep 5 &amp;&amp; say &quot;Hello World&quot;</code> 5秒后电脑说出HelloWorld<br><code>mvn clean install &amp;&amp; say &#39;build ok!!!&#39;</code> 编译耗时长不想一直等待，可以巧妙使用&amp;&amp;</p>
+<h2 id="快速查看日历"><a href="#快速查看日历" class="headerlink" title="快速查看日历"></a>快速查看日历</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cal <span class="comment">// 查看当前日历</span></span><br><span class="line">cal <span class="number">2018</span> <span class="comment">// 查看2018年的日历</span></span><br><span class="line"><span class="keyword">date</span> <span class="comment">// 查看当前时间</span></span><br></pre></td></tr></table></figure>
+<h2 id="显示-隐藏文件夹"><a href="#显示-隐藏文件夹" class="headerlink" title="显示/隐藏文件夹"></a>显示/隐藏文件夹</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">命令运行之后需要重新加载Finder：快捷键option + <span class="keyword">command</span> + <span class="title">esc</span>，选中<span class="title">Finder</span>，重新启动即可</span><br><span class="line"></span><br><span class="line">此命令显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">此命令关闭显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><h2 id="调用emoji表情"><a href="#调用emoji表情" class="headerlink" title="调用emoji表情"></a>调用emoji表情</h2><p>control + command + 空格</p>
+<h2 id="输入苹果icon"><a href="#输入苹果icon" class="headerlink" title="输入苹果icon"></a>输入苹果icon</h2><p>option + shift + k</p>
+<h2 id="向后删除文本"><a href="#向后删除文本" class="headerlink" title="向后删除文本"></a>向后删除文本</h2><p>fn + delete</p>
 
           
         
@@ -1324,7 +1653,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/27/life/shaking-number-in-gz/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/27/life/外地人在广州如何摇号/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -1346,7 +1675,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/02/27/life/shaking-number-in-gz/" itemprop="url">
+                <a class="post-title-link" href="/2018/02/27/life/外地人在广州如何摇号/" itemprop="url">
                   外地人在广州如何摇号？
                 </a>
               
@@ -1416,7 +1745,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  1,029 字
                 </span>
               
 
@@ -1432,7 +1761,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  4 分钟
                 </span>
               
             </div>
@@ -1455,7 +1784,7 @@
           <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="http://jtzl.gzjt.gov.cn/" target="_blank" rel="noopener">广州市中小客车指标调控管理信息系统(车牌摇号)</a><br><a href="http://jtzl.gzjt.gov.cn/index/bszn/2015127/1449468542037_1.html" target="_blank" rel="noopener">个人指标常见问题</a><br><a href="http://www.hrssgz.gov.cn/" target="_blank" rel="noopener">广州市人力资源和社会保障局(医保)</a><br><a href="https://jingyan.baidu.com/article/6dad5075f2d565a123e36eac.html" target="_blank" rel="noopener">广州车牌摇号申请攻略(百度经验)</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/02/27/life/shaking-number-in-gz/#more" rel="contents">
+            <a class="btn" href="/2018/02/27/life/外地人在广州如何摇号/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1498,7 +1827,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/25/summary/2017/">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/25/summary/2017总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="p2ng">
@@ -1520,7 +1849,7 @@
             
               
                 
-                <a class="post-title-link" href="/2018/02/25/summary/2017/" itemprop="url">
+                <a class="post-title-link" href="/2018/02/25/summary/2017总结/" itemprop="url">
                   2017总结
                 </a>
               
@@ -1590,7 +1919,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  
+                  420 字
                 </span>
               
 
@@ -1606,7 +1935,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长" }}">
-                  
+                  1 分钟
                 </span>
               
             </div>
@@ -1653,361 +1982,6 @@
 </ul>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/02/18/tool/Homebrew/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="p2ng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="p2ng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/18/tool/Homebrew/" itemprop="url">
-                  Homebrew
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-18T09:33:25+08:00">
-                2018-02-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长" }}">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p><a href="https://brew.sh/" target="_blank" rel="noopener">https://brew.sh/</a><br><a href="http://caskroom.github.io/" target="_blank" rel="noopener">http://caskroom.github.io/</a><br><a href="https://www.zhihu.com/question/22624898" target="_blank" rel="noopener">brew和brew cask有什么区别？</a></p>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># brew</span></span><br><span class="line">/usr/bin/ruby -e <span class="string">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># cask</span></span><br><span class="line">brew tap caskroom/cask</span><br></pre></td></tr></table></figure>
-<h1 id="Homebrew-cask-upgrade"><a href="#Homebrew-cask-upgrade" class="headerlink" title="Homebrew cask upgrade"></a>Homebrew cask upgrade</h1><p>由于Homebrew-cask不支持动态显示软件版本是否有更新，所以要安装插件来管理…<br><a href="https://github.com/buo/homebrew-cask-upgrade" target="_blank" rel="noopener">https://github.com/buo/homebrew-cask-upgrade</a></p>
-<h2 id="install-1"><a href="#install-1" class="headerlink" title="install"></a>install</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>tap <span class="keyword">buo/cask-upgrade</span></span><br></pre></td></tr></table></figure>
-<h1 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h1><h2 id="Homebrew-1"><a href="#Homebrew-1" class="headerlink" title="Homebrew"></a>Homebrew</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">brew list               显示所有的已安装的软件</span><br><span class="line">brew <span class="builtin-name">info</span> $&lt;软件包&gt;      显示某个包信息</span><br><span class="line">brew <span class="builtin-name">info</span>               显示安装的包数量、文件数量以及占用空间 </span><br><span class="line"></span><br><span class="line">brew search text        搜索本地远程仓库的软件，已安装会显示绿色的勾</span><br><span class="line">brew install &lt;formula&gt;  安装指定软件</span><br><span class="line">brew unistall &lt;formula&gt; 卸载指定软件</span><br><span class="line"></span><br><span class="line">brew update             自动升级homebrew（从github下载最新版本）</span><br><span class="line">brew outdated           检测已经过时的软件</span><br><span class="line">brew<span class="built_in"> upgrade </span>           升级所有已过时的软件，即列出的以过时软件</span><br><span class="line">brew<span class="built_in"> upgrade </span>&lt;formula&gt;  升级指定的软件</span><br><span class="line">brew pin &lt;formula&gt;      禁止指定软件升级</span><br><span class="line">brew unpin &lt;formula&gt;    解锁禁止升级</span><br><span class="line">brew<span class="built_in"> upgrade </span>--all      升级所有的软件包，包括未清理干净的旧版本的包</span><br><span class="line"></span><br><span class="line">brew cleanup -n         列出需要清理的内容</span><br><span class="line">brew cleanup &lt;formula&gt;  清理指定的软件过时包</span><br><span class="line">brew cleanup            清理所有的过时软件</span><br></pre></td></tr></table></figure>
-<h2 id="Homebrew-cask"><a href="#Homebrew-cask" class="headerlink" title="Homebrew cask"></a>Homebrew cask</h2><p>用法基本同<code>Homebrew</code>一致</p>
-<h2 id="Homebrew-cask-upgrade-1"><a href="#Homebrew-cask-upgrade-1" class="headerlink" title="Homebrew cask upgrade"></a>Homebrew cask upgrade</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew help cu            help</span><br><span class="line">brew cu                <span class="built_in"> Upgrade </span>outdated apps</span><br><span class="line">brew cu [CASK]         <span class="built_in"> Upgrade </span>a specific app</span><br></pre></td></tr></table></figure>
-<h1 id="全球最大基友交友网共享"><a href="#全球最大基友交友网共享" class="headerlink" title="全球最大基友交友网共享"></a>全球最大基友交友网共享</h1><p><a href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md" target="_blank" rel="noopener">https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md</a></p>
-<h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p><a href="https://zhuanlan.zhihu.com/p/28249327" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28249327</a></p>
-<h1 id="Show-Case"><a href="#Show-Case" class="headerlink" title="Show Case"></a>Show Case</h1>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/01/10/tool/anaconda-navigator-for-mac/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="p2ng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="p2ng">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/10/tool/anaconda-navigator-for-mac/" itemprop="url">
-                  Anaconda Navigator For Mac
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T00:16:20+08:00">
-                2018-01-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长" }}">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="https://www.anaconda.com/" target="_blank" rel="noopener">https://www.anaconda.com/</a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p><code>brew cask install anaconda</code></p>
-<h1 id="设置国内镜像源"><a href="#设置国内镜像源" class="headerlink" title="设置国内镜像源"></a>设置国内镜像源</h1><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.condarc</span><br><span class="line"></span><br><span class="line">channels:</span><br><span class="line"> -<span class="ruby"> <span class="symbol">https:</span>/<span class="regexp">/mirrors.tuna.tsinghua.edu.cn/anaconda</span><span class="regexp">/pkgs/free</span><span class="regexp">/</span></span></span><br><span class="line"><span class="ruby"> - defaults</span></span><br><span class="line"><span class="ruby"><span class="symbol">show_channel_urls:</span> <span class="literal">true</span></span></span><br></pre></td></tr></table></figure>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/10/tool/anaconda-navigator-for-mac/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
@@ -2086,7 +2060,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2097,7 +2071,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

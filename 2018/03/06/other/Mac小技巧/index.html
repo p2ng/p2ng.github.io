@@ -1,0 +1,830 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Mac Shell查看Mac概况archey,需要brew install archey Cat文件时代码高亮brew install ccat Shell自动补充命令brew install autojump 文件以目录树形式展开brew install tree Mac读出一段文字sleep 5 &amp;amp;&amp;amp; say &amp;quot;Hello World&amp;quot; 5秒后电脑说出Hel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac小技巧">
+<meta property="og:url" content="https://p2ng.github.io/2018/03/06/other/Mac小技巧/index.html">
+<meta property="og:site_name" content="p2ng">
+<meta property="og:description" content="Mac Shell查看Mac概况archey,需要brew install archey Cat文件时代码高亮brew install ccat Shell自动补充命令brew install autojump 文件以目录树形式展开brew install tree Mac读出一段文字sleep 5 &amp;amp;&amp;amp; say &amp;quot;Hello World&amp;quot; 5秒后电脑说出Hel">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-11T06:19:05.237Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac小技巧">
+<meta name="twitter:description" content="Mac Shell查看Mac概况archey,需要brew install archey Cat文件时代码高亮brew install ccat Shell自动补充命令brew install autojump 文件以目录树形式展开brew install tree Mac读出一段文字sleep 5 &amp;amp;&amp;amp; say &amp;quot;Hello World&amp;quot; 5秒后电脑说出Hel">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://p2ng.github.io/2018/03/06/other/Mac小技巧/"/>
+
+
+
+
+
+  <title> Mac小技巧 | p2ng </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?1ef3816ebc34380948fefb80135e20d8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">p2ng</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            我的
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://p2ng.github.io/2018/03/06/other/Mac小技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p2ng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p2ng">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Mac小技巧
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T22:37:25+08:00">
+                2018-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">other</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  225 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长" }}">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Mac-Shell"><a href="#Mac-Shell" class="headerlink" title="Mac Shell"></a>Mac Shell</h1><h2 id="查看Mac概况"><a href="#查看Mac概况" class="headerlink" title="查看Mac概况"></a>查看Mac概况</h2><p><code>archey</code>,需要<code>brew install archey</code></p>
+<h2 id="Cat文件时代码高亮"><a href="#Cat文件时代码高亮" class="headerlink" title="Cat文件时代码高亮"></a>Cat文件时代码高亮</h2><p><code>brew install ccat</code></p>
+<h2 id="Shell自动补充命令"><a href="#Shell自动补充命令" class="headerlink" title="Shell自动补充命令"></a>Shell自动补充命令</h2><p><code>brew install autojump</code></p>
+<h2 id="文件以目录树形式展开"><a href="#文件以目录树形式展开" class="headerlink" title="文件以目录树形式展开"></a>文件以目录树形式展开</h2><p><code>brew install tree</code></p>
+<h2 id="Mac读出一段文字"><a href="#Mac读出一段文字" class="headerlink" title="Mac读出一段文字"></a>Mac读出一段文字</h2><p><code>sleep 5 &amp;&amp; say &quot;Hello World&quot;</code> 5秒后电脑说出HelloWorld<br><code>mvn clean install &amp;&amp; say &#39;build ok!!!&#39;</code> 编译耗时长不想一直等待，可以巧妙使用&amp;&amp;</p>
+<h2 id="快速查看日历"><a href="#快速查看日历" class="headerlink" title="快速查看日历"></a>快速查看日历</h2><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cal <span class="comment">// 查看当前日历</span></span><br><span class="line">cal <span class="number">2018</span> <span class="comment">// 查看2018年的日历</span></span><br><span class="line"><span class="keyword">date</span> <span class="comment">// 查看当前时间</span></span><br></pre></td></tr></table></figure>
+<h2 id="显示-隐藏文件夹"><a href="#显示-隐藏文件夹" class="headerlink" title="显示/隐藏文件夹"></a>显示/隐藏文件夹</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">命令运行之后需要重新加载Finder：快捷键option + <span class="keyword">command</span> + <span class="title">esc</span>，选中<span class="title">Finder</span>，重新启动即可</span><br><span class="line"></span><br><span class="line">此命令显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">此命令关闭显示隐藏文件</span><br><span class="line">defaults <span class="built_in">write</span> com.apple.finder AppleShowAllFiles -bool <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h1 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h1><h2 id="调用emoji表情"><a href="#调用emoji表情" class="headerlink" title="调用emoji表情"></a>调用emoji表情</h2><p>control + command + 空格</p>
+<h2 id="输入苹果icon"><a href="#输入苹果icon" class="headerlink" title="输入苹果icon"></a>输入苹果icon</h2><p>option + shift + k</p>
+<h2 id="向后删除文本"><a href="#向后删除文本" class="headerlink" title="向后删除文本"></a>向后删除文本</h2><p>fn + delete</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/27/life/外地人在广州如何摇号/" rel="next" title="外地人在广州如何摇号？">
+                <i class="fa fa-chevron-left"></i> 外地人在广州如何摇号？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/11/book/Hadoop大数据分析与挖掘实战/" rel="prev" title="Hadoop大数据分析与挖掘实战">
+                Hadoop大数据分析与挖掘实战 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpeg"
+               alt="p2ng" />
+          <p class="site-author-name" itemprop="name">p2ng</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/p2ng" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/2011p2ng" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://my.oschina.net/p2ng" target="_blank" title="oschina">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  oschina
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/liangzp" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://data.qq.com/blog" title="腾讯大数据" target="_blank">腾讯大数据</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://jm.taobao.org/" title="阿里中间件" target="_blank">阿里中间件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://tech.meituan.com/" title="美团点评技术团队" target="_blank">美团点评技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://techshow.ctrip.com/" title="携程技术中心" target="_blank">携程技术中心</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tech.lede.com/" title="网易乐得技术团队" target="_blank">网易乐得技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://tech.youzan.com/" title="有赞技术团队" target="_blank">有赞技术团队</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mtydev.net/" title="猫头鹰技术博客" target="_blank">猫头鹰技术博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.coding.net/" title="coding" target="_blank">coding</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mac-Shell"><span class="nav-number">1.</span> <span class="nav-text">Mac Shell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看Mac概况"><span class="nav-number">1.1.</span> <span class="nav-text">查看Mac概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cat文件时代码高亮"><span class="nav-number">1.2.</span> <span class="nav-text">Cat文件时代码高亮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell自动补充命令"><span class="nav-number">1.3.</span> <span class="nav-text">Shell自动补充命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件以目录树形式展开"><span class="nav-number">1.4.</span> <span class="nav-text">文件以目录树形式展开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac读出一段文字"><span class="nav-number">1.5.</span> <span class="nav-text">Mac读出一段文字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速查看日历"><span class="nav-number">1.6.</span> <span class="nav-text">快速查看日历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示-隐藏文件夹"><span class="nav-number">1.7.</span> <span class="nav-text">显示/隐藏文件夹</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Keyboard"><span class="nav-number">2.</span> <span class="nav-text">Keyboard</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用emoji表情"><span class="nav-number">2.1.</span> <span class="nav-text">调用emoji表情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输入苹果icon"><span class="nav-number">2.2.</span> <span class="nav-text">输入苹果icon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向后删除文本"><span class="nav-number">2.3.</span> <span class="nav-text">向后删除文本</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">p2ng</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
